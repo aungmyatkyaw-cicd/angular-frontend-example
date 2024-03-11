@@ -1,5 +1,5 @@
 # Stage 1: Build an Angular Docker Image
-FROM node:16.15.0-alpine3.15 as build
+FROM node:14.21-alpine as build
 WORKDIR /app
 COPY package*.json .npmrc ./
 RUN npm install
