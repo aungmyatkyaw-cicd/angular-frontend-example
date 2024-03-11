@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  registry:
+  repository:
+  tag:
+  pullPolicy: Always
+
+imagePullSecrets:
+  - name: docker-registry-credentials
+nameOverride: ""
+fullnameOverride: ""
+
+env:
+
+service:
+  host:
+  type: ClusterIP
+  ports:
+    - name: http
+      protocol: TCP
+      externalPort: 80
+      internalPort: 80
+
+resources: {}
+
+hpa:
+  apiVersion: autoscaling/v2beta2
+  enabled: "false"
+  maxReplicas: 1
+  minReplicas: 1
+  cpuUtilization: 80
+  memoryUtilization: 80

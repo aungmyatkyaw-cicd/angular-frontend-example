@@ -1,0 +1,10 @@
+name: <<Service-Name>>
+version: 1.0.0
+description: <<Description>>
+keywords:
+  - "<<App-Name>> - <<Service-Name>>"
+maintainers:
+  - name: Aung Myat Kyaw
+    email: aungmyatkyaw.kk@gmail.com
+apiVersion: v1
+appVersion: "1.0.0"
