@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json .npmrc ./
 RUN npm install
 COPY . .
-RUN npm run build -- --prod --output-path=./dist/out
+RUN npm run build -- --output-path=./dist/out
 
 # Stage 2, use the compiled app, ready for production with Nginx
 FROM nginx:alpine
