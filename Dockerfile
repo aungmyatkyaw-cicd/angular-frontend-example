@@ -10,6 +10,6 @@
 FROM nginx:alpine
 LABEL maintainer="Aung Myat Kyaw <aungmyatkyaw.kk@gmail.com>"
 COPY dist/out/browser/ /usr/share/nginx/html
-COPY /nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY nginx-custom.conf /etc/nginx/conf.d/default.conf
 COPY env.sh /docker-entrypoint.d/env.sh
 RUN chmod a+x /docker-entrypoint.d/env.sh
