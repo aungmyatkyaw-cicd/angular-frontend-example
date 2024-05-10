@@ -41,7 +41,7 @@ spec:
       volumes:
         - name: tz-config
           hostPath:
-            path: /usr/share/zoneinfo/Asia/Yangon
+            path: /usr/share/zoneinfo/Asia/Bangkok
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}

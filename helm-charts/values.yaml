@@ -25,8 +25,8 @@ service:
 resources: {}
 
 hpa:
-  apiVersion: autoscaling/v2beta2
-  enabled: "false"
+  apiVersion: autoscaling/v2
+  enabled: "true"
   maxReplicas: 1
   minReplicas: 1
   cpuUtilization: 80
