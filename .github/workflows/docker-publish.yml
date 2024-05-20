@@ -82,6 +82,7 @@ jobs:
         uses: docker/build-push-action@v5.3.0
         with:
           context: .
+          file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: test
           labels: ${{ steps.meta.outputs.labels }}
