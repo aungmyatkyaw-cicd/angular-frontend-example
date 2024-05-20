@@ -1,10 +1,10 @@
 # Stage 1: Build an Angular Docker Image
-# FROM node:hydrogen-alpine as build
-# WORKDIR /app
-# COPY package*.json .npmrc ./
-# RUN npm install
-# COPY . .
-# RUN npm run build -- --output-path=./dist/out
+FROM node:hydrogen-alpine as build
+WORKDIR /app
+COPY package*.json .npmrc ./
+RUN npm install
+COPY . .
+RUN npm run build -- --output-path=./dist/out
 
 # Stage 2, use the compiled app, ready for production with Nginx
 FROM nginx:alpine
